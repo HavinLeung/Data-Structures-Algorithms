@@ -3,6 +3,8 @@
  * Created by havinleung on 2017-06-27.
  */
 public class myArrayListDeque<Item> {
+    //TODO: Implement by treating the array as circular
+    //Note: use a first/last index
     private Item[] list;
     private int size;
 
