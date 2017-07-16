@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by havinleung on 2017-06-27.
@@ -22,7 +23,6 @@ public class Test1 {
         assertEquals("Index 1: ", 50, (int) deque.get(1));
         assertEquals("Index 2: ", 51, (int) deque.get(2));
         assertEquals("Size: ", 3, deque.size());
-        System.out.println("done indexTest");
     }
 
     @Test
@@ -31,7 +31,6 @@ public class Test1 {
         assertEquals("Remove First: ", 49, (int) deque.removeFirst());
         assertEquals("Size: ", 1, deque.size());
         assertEquals("Check if items are really removed: ",null,deque.get(1));
-        System.out.println("done removeTest");
     }
 
     @Test
@@ -41,7 +40,6 @@ public class Test1 {
         deque.removeLast();
         assertEquals("Empty test: ",0,deque.size());
         assertEquals("Empty test: ",true,deque.isEmpty());
-        System.out.println("done emptyTest");
     }
 
 
