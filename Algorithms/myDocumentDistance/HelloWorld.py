@@ -68,7 +68,7 @@ file1 = get_words('input.txt')                  # Let W1, W2, L1, L2 be # of wor
 file2 = get_words('input2.txt')                 # O(W1+W2): get_words str methods are O(n)
 wordMap = {}                                    # O(1): create an empty dictionary
 add_to_dict(file1, file2, wordMap)              # O(W1+W2): runs through every word
-dotProduct = get_dot_product(wordMap)           # O(L1+L2): runs through every unique word
+dotProduct = get_dot_product(wordMap)           # O(L1): runs through every unique word
 totalSum = get_vector_product_size(wordMap)     # O(L1+L2): runs through every unique word
 print(dotProduct)                               # Total: O(W)+O(L)+O(1)... since L<=W, O(L) = O(W)
 print(totalSum)                                 # Total complexity: O(W)
