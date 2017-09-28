@@ -1,5 +1,5 @@
 # Document distance
-I was inspired by **lecture #2 of MIT 6.006** to try out the described "Document Distance".
+I was inspired by **lecture #2 of MIT 6.006** to try out the described "Document Distance". The sample inputs are taken from the MIT OCW site.
 This is a vector based similarity measure, defined by the angle between two vectors, where each vector represents one of the documents.
 
 I have done a line by line time complexity analysis:
