@@ -7,11 +7,11 @@ import static org.junit.Assert.assertEquals;
  * Created by havinleung on 2017-06-27.
  */
 public class Test2 {
-    private myArrayListDeque<Integer> deque;
+    private ArrayDeque<Integer> deque;
 
     @Before
     public void before(){
-        deque = new myArrayListDeque<>();
+        deque = new ArrayDeque<>();
         deque.addFirst(50);
         deque.addLast(51);
         deque.addFirst(49);

@@ -2,7 +2,7 @@
 /**
  * Created by havinleung on 2017-06-27.
  */
-public class myLinkedListDeque <Item> {
+public class LinkedListDeque <Item> {
     private class Node{
         private Item item;
         private Node next;
@@ -24,7 +24,7 @@ public class myLinkedListDeque <Item> {
     /*
     * Constructor methods
     * */
-    public myLinkedListDeque(){
+    public LinkedListDeque(){
         sentinal = new Node(null, null,null);
         sentinal.next=sentinal;
         sentinal.prev=sentinal;
