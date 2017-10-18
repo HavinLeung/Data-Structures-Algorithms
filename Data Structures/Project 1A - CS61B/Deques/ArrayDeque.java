@@ -87,7 +87,9 @@ public class ArrayDeque<Item> {
      * Removes and returns the item at the front of the Deque. If no such item exists, returns null.
      **/
     public Item removeFirst() {
-        if (isEmpty()) return null;
+        if (isEmpty()) {
+            return null;
+        }
         Item x = list[first];
         list[first] = null;
         first = moveIndexRight(first);
@@ -100,7 +102,9 @@ public class ArrayDeque<Item> {
      * Removes and returns the item at the back of the Deque. If no such item exists, returns null.
      **/
     public Item removeLast() {
-        if (isEmpty()) return null;
+        if (isEmpty()) {
+            return null;
+        }
         Item x = list[last];
         list[last] = null;
         last = moveIndexLeft(last);
@@ -114,7 +118,9 @@ public class ArrayDeque<Item> {
      * If no such item exists, returns null. Must not alter the deque!
      **/
     public Item get(int index) {
-        if (index < 0 || index >= size) return null;
+        if (index < 0 || index >= size) {
+            return null;
+        }
         index = first + index;
         index = index % list.length;
         return list[index];
@@ -173,7 +179,9 @@ public class ArrayDeque<Item> {
     private int moveIndexLeft(int x) {
         x--;
         x = x % list.length;
-        if (x < 0) x += list.length; //since it's not the modulus but the remainder...
+        if (x < 0) {
+            x += list.length; //since it's not the modulus but the remainder...
+        }
         return x;
     }
 }

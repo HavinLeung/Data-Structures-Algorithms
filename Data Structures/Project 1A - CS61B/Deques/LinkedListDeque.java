@@ -82,7 +82,9 @@ public class LinkedListDeque<Item> {
      * Prints the items in the Deque from first to last, separated by a space.
      **/
     public void printDeque() {
-        if (size == 0) return;
+        if (size == 0) {
+            return;
+        }
         Node p = sentinal;
         while (p.next != sentinal) {
             p = p.next;
@@ -95,7 +97,9 @@ public class LinkedListDeque<Item> {
      * Removes and returns the item at the front of the Deque. If no such item exists, returns null.
      **/
     public Item removeFirst() {
-        if (size == 0) return null;
+        if (size == 0) {
+            return null;
+        }
         size--;
         //create pointer to first item
         Node p = sentinal.next;
@@ -110,7 +114,9 @@ public class LinkedListDeque<Item> {
      * Removes and returns the item at the back of the Deque. If no such item exists, returns null.
      **/
     public Item removeLast() {
-        if (size == 0) return null;
+        if (size == 0) {
+            return null;
+        }
         size--;
         Node p = sentinal.prev;
         //remove all references of last node, set to second last node.
@@ -124,7 +130,9 @@ public class LinkedListDeque<Item> {
      * If no such item exists, returns null. Must not alter the deque!
      **/
     public Item get(int index) {
-        if (index < 0 || index >= size) return null;
+        if (index < 0 || index >= size) {
+            return null;
+        }
         if (index > ((size - 1) / 2)) {
             Node p = scrollBack(size - 1 - index); //start at last, count backwards
             return p.item;
@@ -135,7 +143,9 @@ public class LinkedListDeque<Item> {
     }
 
     public Item getRecursive(int index) {
-        if (index >= size || index < 0) return null;
+        if (index >= size || index < 0) {
+            return null;
+        }
         return getRecursive(sentinal, index);
     }
 
