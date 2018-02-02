@@ -18,7 +18,6 @@ def power(base, exponent):
         return 1
     if exponent < 0:
         return power(1 / base, -exponent)
-    bin_rep = str(bin(exponent))[2:][::-1]  # Reversed binary representation
     square = base
     value = 1
 
@@ -41,9 +40,10 @@ def power(base, exponent):
     # Square and multiply in same loop.
     # Improved space complexity from O(lg(n)) to O(1)
     # Improved constant factor of time complexity
-    for i in range(len(bin_rep)):
-        if bin_rep[i] == '1':
+    while exponent:
+        if exponent & 1:
             value *= square
-        square **= 2
+        exponent >>= 1
+        square *= square
 
     return value
