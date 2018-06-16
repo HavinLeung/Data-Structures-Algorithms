@@ -1,9 +1,41 @@
 from quicksort import quicksort
+import random
 
-assert quicksort([5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5]
-assert quicksort([1, 3, 5, 4, 2]) == [1, 2, 3, 4, 5]
-assert quicksort([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]
-assert quicksort([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
-assert quicksort([0, 26, 19, 1, 2, 5, -12, 999, 2]) == [-12, 0, 1, 2, 2, 5, 19, 26, 999]
-assert quicksort([5]) == [5]
-assert quicksort([]) == []
+# reversed
+test_list = [i for i in range(100, -100, -1)]
+# print(test_list)
+model_list = test_list[:] #deep copy
+quicksort(test_list)
+model_list.sort()
+assert test_list == model_list
+
+# all same
+test_list = [100]*200
+# print(test_list)
+model_list = test_list[:] #deep copy
+quicksort(test_list)
+model_list.sort()
+assert test_list == model_list
+
+# empty list
+test_list = []
+# print(test_list)
+model_list = test_list[:] #deep copy
+quicksort(test_list)
+model_list.sort()
+assert test_list == model_list
+
+# random testing
+for _ in range(20):
+    test_list = []
+    model_list = []
+    for __ in range(1000):
+        num = random.randint(-1000, 1000)
+        test_list.append(num)
+        model_list.append(num)
+    quicksort(test_list)
+    model_list.sort()
+    # print("test_list: " + str(test_list))
+    # print("model_list: " + str(model_list))
+    assert test_list == model_list
+print("All tests passed")
