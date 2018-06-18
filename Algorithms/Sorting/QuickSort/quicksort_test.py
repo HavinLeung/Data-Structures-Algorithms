@@ -1,5 +1,6 @@
 from quicksort import quicksort
 import random
+import tqdm
 
 # reversed
 test_list = [i for i in range(100, -100, -1)]
@@ -25,11 +26,14 @@ quicksort(test_list)
 model_list.sort()
 assert test_list == model_list
 
+print("Passed edge cases")
+
 # random testing
-for _ in range(20):
+print("Testing on random lists of size 10000")
+for _ in tqdm.trange(100):
     test_list = []
     model_list = []
-    for __ in range(1000):
+    for __ in range(10000):
         num = random.randint(-1000, 1000)
         test_list.append(num)
         model_list.append(num)
