@@ -1,0 +1,1 @@
+Manacher's algo is a linear time algorithm to find the max palindromic substring in a string. I wrote about it [here](https://github.com/HavinLeung/Notes/blob/master/Random%20Problems/longest_palindromic_substr.md) 
