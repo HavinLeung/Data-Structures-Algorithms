@@ -1,7 +1,7 @@
 class Solution:
     def preProcessString(self, s: str) -> str:
         '''
-        "hello" -> "$#h#e#l#l#o#@"
+        "hello" -> "^#h#e#l#l#o#$"
         '''
         return '^#' + ''.join([x + '#' for x in s]) + '$'
 
